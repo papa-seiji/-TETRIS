@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="style.css">
   </head>
 <body>
+  <script src="score.js"></script>
   <canvas id="can"></canvas>
   <script>
 
@@ -32,10 +33,10 @@ const TETRO_COLORS = [
     "#FB2",         //2オレンジ
     "#66F",         //3青
     "#C5C",         //4紫
-    "#FD2",         //5黄色
+    "#FD2",         //5黄
     "#F44",         //6赤
     "#5B5",         //7緑
-    // "black",         //8黒
+    "#ff69b4",      //8桃
 ];
 const TETROMINO_TYPES = [
     [],          // 0 空
@@ -272,8 +273,8 @@ document.onkeydown = function(e){
     case 37://左
     if( checkMove(-1,0))tetro_x--;
     break;
-    case 38://上
-    if( checkMove(0,-1))tetro_y--;
+    // case 38://上
+    // if( checkMove(0,-1))tetro_y--;
     break;
     case 39://右
     if( checkMove(1,0))tetro_x++;
